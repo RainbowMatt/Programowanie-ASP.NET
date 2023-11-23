@@ -27,9 +27,15 @@ namespace Programowanie_ASP.NET.Controllers
         {
             return View();
         }
-
-        public IActionResult Calculator() 
+        public enum Operator
         {
+            Unknown, Add, Mul, Sub, Div
+        }
+        public IActionResult Calculator(Operator op, double? a, double? b) 
+        {
+            ViewBag.Op = op;
+            ViewBag.A = a;
+            ViewBag.B = b;
             return View();
         }
 
