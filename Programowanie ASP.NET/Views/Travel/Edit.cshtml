@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Programowanie_ASP.NET.Models.Travel
+
+<h2>Edycja podróży</h2>
+<form asp-action="Edit" asp-controller="Travel" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Name">Nazwa podróży</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <!-- Pozostałe pola formularza -->
+
+    <button type="submit" class="btn btn-primary">Zapisz</button>
+    <a asp-action="Index" asp-controller="Travel" class="btn btn-secondary">Anuluj</a>
+</form>

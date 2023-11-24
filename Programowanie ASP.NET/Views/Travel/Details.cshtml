@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Programowanie_ASP.NET.Models.Travel
+
+<h2>Szczegóły podróży</h2>
+<p><strong>Nazwa:</strong> @Model.Name</p>
+<p><strong>Data rozpoczęcia:</strong> @Model.StartDate.ToShortDateString()</p>
+<p><strong>Data zakończenia:</strong> @Model.EndDate.ToShortDateString()</p>
+<p><strong>Miejsce początkowe:</strong> @Model.StartingLocation</p>
+<p><strong>Miejsce końcowe:</strong> @Model.EndingLocation</p>
+<p><strong>Uczestnicy:</strong> @Model.Participants</p>
+<p><strong>Przewodnik:</strong> @Model.Guide</p>
+<a asp-action="Index" asp-controller="Travel" class="btn btn-secondary">Powrót do listy</a>
+
