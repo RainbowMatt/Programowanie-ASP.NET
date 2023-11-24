@@ -6,6 +6,7 @@ namespace Programowanie_ASP.NET.Controllers
 {
     public class CalculatorController : Controller
     {
+        [HttpPost]
         public IActionResult Result(Calculator model)
         {
             if (!model.IsValid())
