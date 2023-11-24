@@ -28,6 +28,6 @@ namespace Programowanie_ASP.NET.Controllers
 
             // Jeśli ModelState.IsValid nie jest spełnione, powracamy do widoku z formularzem i błędami
             return View(model);
-        }
+        }   
     }
 }

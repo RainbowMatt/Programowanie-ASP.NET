@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!-- Views/Travel/Create.cshtml -->
+@model Programowanie_ASP.NET.Models.Travel
+
+<h2>Nowa podróż</h2>
+<form asp-action="Create" asp-controller="Travel" method="post">
+    <div asp-validation-summary="All"></div>
+
+    <div class="form-group">
+        <label asp-for="Name">Nazwa podróży</label>
+        <div>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StartDate">Data rozpoczęcia</label>
+        <div>
+            <input asp-for="StartDate" type="date" class="form-control" />
+            <span asp-validation-for="StartDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EndDate">Data zakończenia</label>
+        <div>
+            <input asp-for="EndDate" type="date" class="form-control" />
+            <span asp-validation-for="EndDate" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="StartingLocation">Miejsce początkowe</label>
+        <div>
+            <input asp-for="StartingLocation" class="form-control" />
+            <span asp-validation-for="StartingLocation" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="EndingLocation">Miejsce końcowe</label>
+        <div>
+            <input asp-for="EndingLocation" class="form-control" />
+            <span asp-validation-for="EndingLocation" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Participants">Uczestnicy (oddzielone przecinkami)</label>
+        <div>
+            <input asp-for="Participants" class="form-control" />
+            <span asp-validation-for="Participants" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Guide">Przewodnik</label>
+        <div>
+            <input asp-for="Guide" class="form-control" />
+            <span asp-validation-for="Guide" class="text-danger"></span>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Utwórz</button>
+</form>
+
